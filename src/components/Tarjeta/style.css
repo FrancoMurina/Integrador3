@@ -1,0 +1,13 @@
+.mas{
+    color: blue;
+}
+.mas:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.mostrar{
+    display: block;
+}
+.esconder{
+    display: none;
+}
