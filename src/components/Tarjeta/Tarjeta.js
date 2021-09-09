@@ -25,12 +25,12 @@ export default class Tarjeta extends Component{
         return(
             <div>
             <article>
-                <section class="navigation">
+                <section className="navigation">
                     <div>
-                        <i class="fas fa-chevron-left"></i>
-                        <i class="fas fa-chevron-right"></i>
+                        <i className="fas fa-chevron-left"></i>
+                        <i className="fas fa-chevron-right"></i>
                     </div>
-                    <i class="far fa-window-close"></i>
+                    <i className="far fa-window-close"></i>
                 </section>
                 <main>
                     <img src={this.props.foto} alt="Cargando"/>

@@ -10,7 +10,7 @@ export default class Footer extends Component{
     render(){
         return(
         <footer>
-            <ul class="team">
+            <ul className="team">
                 <li>Maria Noel Russo Mendez</li>
                 <li>Franco Murina</li>
                 <li>Alexia Alurralde</li>
