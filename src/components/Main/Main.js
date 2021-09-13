@@ -10,7 +10,9 @@ export default class Main extends Component{
         super(props);
         this.state={
             pelicula:[],
-            filterPeliculas: []
+            filterPeliculas: [],
+            mensaje:"Cargando...",
+            page: 2
         }
     }
     componentDidMount(){
@@ -19,8 +21,8 @@ export default class Main extends Component{
         .then(data => {
             console.log(data)
             this.setState({
-                pelicula:data.results,
-                filterPeliculas:data.results,
+                pelicula:data.results, //Va a estar fijo
+                filterPeliculas:data.results, //Va a ir cambiando
             })
         })
         .catch(error => console.log(error));
@@ -48,26 +50,52 @@ export default class Main extends Component{
         );
         if(nombreAFiltrar === ""){
             this.setState({
-                filterPeliculas: this.state.pelicula
+                filterPeliculas: this.state.pelicula,
+                mensaje:"Cargando...",
             })
-        } else {
+        }else if(arrayFiltrada.length <= 0){
+                this.setState({
+                    mensaje: "No hay datos que coincidan con su búsqueda",
+                    filterPeliculas: []
+                    
+                })
+        }else {
             this.setState({
-                filterPeliculas: arrayFiltrada
+                filterPeliculas: arrayFiltrada,
+                mensaje:"Cargando...",
             })
         } 
     }
+    agregarPelicula(){
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=${this.state.page}&top=10&index=${this.state.index}`)
+        .then(response => response.json())
+        .then(data=>{
+            let arrayPrevio = this.state.pelicula;
+            let arrayActualizado = arrayPrevio.concat(data.results);
+            let paginaActualizado = this.state.page + 1
+            this.setState({
+                pelicula:arrayActualizado,
+                filterPeliculas:arrayActualizado,
+                pagina: paginaActualizado,
+            })
+        })
+    }
 
-
+  
     render(){
         console.log(this.state.pelicula)
+        console.log(this.state.mensaje)
+        //console.log(arrayFiltrada)
+        //console.log(filterPeliculas)
         //console.log(this.state.pelicula[0])
     return(
             <main>
                 
                 <Header filtrarPorNombre={(nombreAFiltrar)=>this.filtrarPorNombre(nombreAFiltrar)} />
-                {this.state.characters === [] ?
+                <button onClick={()=>this.agregarPelicula()}>Agregar mas</button>
+                {this.state.filterPeliculas.length === 0 ?
                 
-                <h4>Cargando... </h4>:
+                <h2>{this.state.mensaje}</h2>:
                 this.state.filterPeliculas.map((pelicula,index)=>{
                     return <Tarjeta
                     key={index}
