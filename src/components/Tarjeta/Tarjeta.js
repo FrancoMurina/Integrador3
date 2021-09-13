@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './style.css'
+import './style.css';
 export default class Tarjeta extends Component{
     constructor(props){
         super(props);

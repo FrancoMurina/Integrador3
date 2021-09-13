@@ -1,0 +1,12 @@
+main{
+    display: flex;
+    flex-direction: row;
+}
+.filas{
+    display: flex;
+    flex-direction: row;
+}
+.columnas{
+    display: flex;
+    flex-direction: column;
+}

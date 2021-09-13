@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Tarjeta from "../Tarjeta/Tarjeta";
 import Header from "../Header/Header";
+import './style.css'; 
 
 let key = "3801289076602860794bddb717c8f4f5"
 let api =`https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=1`
@@ -12,14 +13,16 @@ export default class Main extends Component{
             pelicula:[],
             filterPeliculas: [],
             mensaje:"Cargando...",
-            page: 2
+            page: 2,
+            direccion: "filas",
+            ordenarPor:"columnas",
         }
     }
     componentDidMount(){
         fetch(api)
         .then(response => { return response.json() })
         .then(data => {
-            console.log(data)
+            //console.log(data)
             this.setState({
                 pelicula:data.results, //Va a estar fijo
                 filterPeliculas:data.results, //Va a ir cambiando
@@ -27,12 +30,7 @@ export default class Main extends Component{
         })
         .catch(error => console.log(error));
     }
-
-    expandirPelicula(){
-
-    }
-    
-    //No funciona
+    //Funciona
     eliminarPelicula(id){
         console.log(id)
         let peliculaFiltradas = this.state.pelicula.filter(pelicula => pelicula.id !== id)
@@ -80,19 +78,37 @@ export default class Main extends Component{
             })
         })
     }
-
+    ordenarPelicula(){
+        if(this.state.direccion === 'filas'){
+            this.setState({
+                direccion: 'columnas',
+                ordenarPor:'filas'
+            })
+        }else{
+            this.setState({
+                direccion:'filas',
+                ordenarPor:'columnas',
+            })
+        }
+    }
+    abecedario(){
+        
+    }
   
     render(){
         console.log(this.state.pelicula)
-        console.log(this.state.mensaje)
+        //console.log(this.state.mensaje)
         //console.log(arrayFiltrada)
         //console.log(filterPeliculas)
         //console.log(this.state.pelicula[0])
     return(
-            <main>
-                
-                <Header filtrarPorNombre={(nombreAFiltrar)=>this.filtrarPorNombre(nombreAFiltrar)} />
+        <div>
+            <Header filtrarPorNombre={(nombreAFiltrar)=>this.filtrarPorNombre(nombreAFiltrar)} />
+                <button onClick={()=>this.ordenarPelicula()}>Ordenar peliculas en {this.state.direccion} </button> 
                 <button onClick={()=>this.agregarPelicula()}>Agregar mas</button>
+            <main className={this.state.ordenarPor}>
+                
+                
                 {this.state.filterPeliculas.length === 0 ?
                 
                 <h2>{this.state.mensaje}</h2>:
@@ -113,6 +129,7 @@ export default class Main extends Component{
                 })}
                 
             </main>
+        </div>
         )
     }
 }
