@@ -1,0 +1,6 @@
+.banner{
+display: flex;
+padding: 2em;
+width: fit-content;
+align-items: center;
+}

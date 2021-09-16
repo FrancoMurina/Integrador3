@@ -23,7 +23,7 @@ export default class Tarjeta extends Component{
     render(){
 
         return(
-            <div>
+            <div className="contenedorTarjeta">
             <article>
                 <section className="navigation">
                     <div>
@@ -33,7 +33,9 @@ export default class Tarjeta extends Component{
                     <i className="far fa-window-close"></i>
                 </section>
                 <main>
-                    <img src={this.props.foto} alt="Cargando"/>
+                
+                    <img className="foto" src={this.props.foto} alt="Cargando"/>
+                    <div className="info">
                     <h3>{this.props.titulo}</h3>
                     <p className="description">{this.props.descripcion}</p>
                     <p className='mas' onClick={()=> this.handleShow()}>{this.state.mensaje}</p>
@@ -46,6 +48,7 @@ export default class Tarjeta extends Component{
                     </section>
                     {/* <a onClick={()=>this.props.vermas(this.props.name)} href="https://www.google.com/?client=safari">Ver más</a> */}
                     <button onClick={()=>this.props.eliminar(this.props.id)}>Borrar pelicula</button>
+                    </div>
                 </main>
             </article>
             </div>

@@ -11,3 +11,25 @@
 .esconder{
     display: none;
 }
+.filas .contenedorTarjeta{
+width: 15%;
+padding: 2em;
+}
+
+.columnas .contenedorTarjeta .info{
+display: flex;
+flex-direction: column;
+padding: 2em;
+margin-right: 4em;
+}
+
+.columnas .contenedorTarjeta{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+
+}
+
+.columnas .foto{
+    width: 20%;
+}

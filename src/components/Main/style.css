@@ -1,12 +1,31 @@
-main{
+.filas main{
+    display: flex;
+    flex-direction: column;
+
+}
+.columnas main{
     display: flex;
     flex-direction: row;
+
 }
 .filas{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .columnas{
     display: flex;
     flex-direction: column;
+}
+.ordenar{
+display: flex;
+text-decoration: none;
+}
+.agregar{
+display: flex;
+text-decoration: none;
+}
+nav{
+    display: flex;
+    flex-direction: row;
 }

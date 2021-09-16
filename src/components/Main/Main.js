@@ -103,9 +103,15 @@ export default class Main extends Component{
         //console.log(this.state.pelicula[0])
     return(
         <div>
+            <nav>
+            <img src="../imagenes/logo copy.png" alt="logo"/>
+            <ul>
+            <li className="ordenar"> <button onClick={()=>this.ordenarPelicula()}>Ordenar peliculas en {this.state.direccion} </button></li>
+            <li className="agregar"> <button onClick={()=>this.agregarPelicula()}>Agregar mas</button></li> 
+            </ul>
+            </nav>
             <Header filtrarPorNombre={(nombreAFiltrar)=>this.filtrarPorNombre(nombreAFiltrar)} />
-                <button onClick={()=>this.ordenarPelicula()}>Ordenar peliculas en {this.state.direccion} </button> 
-                <button onClick={()=>this.agregarPelicula()}>Agregar mas</button>
+               
             <main className={this.state.ordenarPor}>
                 
                 
