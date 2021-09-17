@@ -32,7 +32,7 @@ export default class Tarjeta extends Component{
                     </div>
                     <i className="far fa-window-close"></i>
                 </section>
-                <main>
+                <main className="tarjetas">
                 
                     <img className="foto" src={this.props.foto} alt="Cargando"/>
                     <div className="info">
@@ -47,7 +47,7 @@ export default class Tarjeta extends Component{
                         </ul>
                     </section>
                     {/* <a onClick={()=>this.props.vermas(this.props.name)} href="https://www.google.com/?client=safari">Ver más</a> */}
-                    <button onClick={()=>this.props.eliminar(this.props.id)}>Borrar pelicula</button>
+                    <button className="boton"onClick={()=>this.props.eliminar(this.props.id)}>Borrar pelicula</button>
                     </div>
                 </main>
             </article>

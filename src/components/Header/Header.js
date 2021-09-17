@@ -41,7 +41,7 @@ export default class Header extends Component{
             <form onSubmit= {(evento) => this.prevenirSubmit(evento)}>
                 <input onChange={(evento)=> this.capturaInput(evento)} type="text" name="search" id="" placeholder="Search"/>
                 {/* <h3> {this.state.valorInput}</h3> */}
-                <button type="submit"><i className="fas fa-search">Buscar</i></button>
+                <button className="botonbuscar"type="submit"><i className="fas fa-search">Buscar</i></button>
             </form>
         </section>
     </header>

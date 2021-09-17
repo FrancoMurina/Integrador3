@@ -15,6 +15,11 @@ export default class Footer extends Component{
                 <li>Franco Murina</li>
                 <li>Alexia Alurralde</li>
             </ul>
+            {/* <ul className="ultimalinea">
+                <li className="facebook"><img src="../imagenes/facebook.png" alt="facebook"/></li>
+                <li className="instagram"><img src="./imagenes/instagram.png" alt="instagram"/></li>
+                <li className="twitter"><img src="./imagenes/twitter.png" alt="twitter"/></li>
+            </ul> */}
         </footer>
         )
     }

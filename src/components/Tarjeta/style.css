@@ -1,5 +1,5 @@
 .mas{
-    color: blue;
+    color: purple
 }
 .mas:hover{
     text-decoration: underline;
@@ -20,7 +20,7 @@ padding: 2em;
 display: flex;
 flex-direction: column;
 padding: 2em;
-margin-right: 4em;
+margin-right: 2em;
 }
 
 .columnas .contenedorTarjeta{

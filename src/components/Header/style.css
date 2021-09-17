@@ -1,6 +1,32 @@
 .banner{
 display: flex;
 padding: 2em;
+padding-left: 15px;
 width: fit-content;
 align-items: center;
+}
+
+form {
+    padding: 10px 0px 0px 85px;
+}
+
+
+.form-group input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    width: 80%;
+    background: #f1f1f1;
+    margin-bottom: 20px;
+}
+        
+.botonbuscar {
+
+    padding: 10px;
+    background: purple;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; 
+    cursor: pointer;
 }
