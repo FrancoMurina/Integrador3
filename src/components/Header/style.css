@@ -6,27 +6,28 @@ width: fit-content;
 align-items: center;
 }
 
-form {
-    padding: 10px 0px 0px 85px;
+.formbuscar {
+    padding: 10px 40px 0px 150px;
 }
 
 
-.form-group input[type=text] {
+.inputbuscar {
     padding: 10px;
     font-size: 17px;
     border: 1px solid grey;
     width: 80%;
     background: #f1f1f1;
     margin-bottom: 20px;
+    border-radius: 5px;
 }
         
 .botonbuscar {
 
-    padding: 10px;
+    padding: 12px;
     background: purple;
     color: white;
-    font-size: 17px;
+    font-size: 16px;
     border: 1px solid grey;
     border-left: none; 
-    cursor: pointer;
+    border-radius: 5px;
 }

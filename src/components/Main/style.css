@@ -58,6 +58,8 @@ font-family: unset;
 font-size: 16px;
 background-color: purple;
 color: white;
+border: 1px solid grey;
+border-radius: 5px;
 }
 
 nav{

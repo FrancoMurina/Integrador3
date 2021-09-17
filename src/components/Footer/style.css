@@ -1,0 +1,40 @@
+.integrantes{
+    margin-left: 10px;
+}
+
+footer {
+    margin-top: 50px;
+    font-family: unset;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    border-top: 1px solid rgba(190, 30, 190, 0.781);
+}
+
+.ultimalinea {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0%;
+    text-decoration: none;
+    color: white; 
+    list-style: none;
+}
+
+.facebook img {
+    width: 30px;
+    margin: 10px ;
+}
+.instagram img {
+    width: 30px ;
+    margin: 10px ;
+}
+.twitter img{
+    width: 55px;
+    margin: 5px;
+}

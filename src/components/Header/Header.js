@@ -38,8 +38,8 @@ export default class Header extends Component{
             <i className="fas fa-th"></i>
             <i className="fas fa-align-justify"></i>
 
-            <form onSubmit= {(evento) => this.prevenirSubmit(evento)}>
-                <input onChange={(evento)=> this.capturaInput(evento)} type="text" name="search" id="" placeholder="Search"/>
+            <form className="formbuscar" onSubmit= {(evento) => this.prevenirSubmit(evento)}>
+                <input className="inputbuscar" onChange={(evento)=> this.capturaInput(evento)} type="text" name="search" id="" placeholder="Buscar..."/>
                 {/* <h3> {this.state.valorInput}</h3> */}
                 <button className="botonbuscar"type="submit"><i className="fas fa-search">Buscar</i></button>
             </form>
