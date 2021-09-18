@@ -41,9 +41,9 @@ export default class Tarjeta extends Component{
                     <p className='mas' onClick={()=> this.handleShow()}>{this.state.mensaje}</p>
                     <section className={this.state.clase}>
                         <ul>
-                            <li>Idioma original: {this.props.idioma}</li>
-                            <li>Fecha de estreno: {this.props.estreno}</li>       
-                            <li>Popularidad: {this.props.popularidad}</li>
+                            <li className="masinfo">Idioma original: {this.props.idioma}</li>
+                            <li className="masinfo">Fecha de estreno: {this.props.estreno}</li>       
+                            <li className="masinfo">Popularidad: {this.props.popularidad}</li>
                         </ul>
                     </section>
                     {/* <a onClick={()=>this.props.vermas(this.props.name)} href="https://www.google.com/?client=safari">Ver más</a> */}

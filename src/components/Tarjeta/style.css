@@ -1,6 +1,7 @@
 .mas{
     color: purple
 }
+
 .mas:hover{
     text-decoration: underline;
     cursor: pointer;
@@ -11,6 +12,12 @@
 .esconder{
     display: none;
 }
+
+.masinfo{
+    list-style:square;
+    /* list-style:none; */
+}
+
 .filas .contenedorTarjeta{
 width: 15%;
 padding: 2em;
@@ -27,9 +34,9 @@ margin-right: 2em;
     display: flex;
     flex-direction: column;
     padding: 2em;
-
 }
 
 .columnas .foto{
     width: 20%;
+    height: 80%;
 }
