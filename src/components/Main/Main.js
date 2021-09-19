@@ -15,7 +15,7 @@ export default class Main extends Component{
             mensaje:"Cargando...",
             page: 2,
             direccion: "filas",
-            ordenarPor:"columnas",
+            ordenarPor:"columna",
         }
     }
     componentDidMount(){
@@ -53,7 +53,7 @@ export default class Main extends Component{
             })
         }else if(arrayFiltrada.length <= 0){
                 this.setState({
-                    mensaje: "No hay datos que coincidan con su búsqueda",
+                    mensaje: "No hay datos que coincidan con su búsqueda.",
                     filterPeliculas: []
                     
                 })
@@ -81,13 +81,13 @@ export default class Main extends Component{
     ordenarPelicula(){
         if(this.state.direccion === 'filas'){
             this.setState({
-                direccion: 'columnas',
+                direccion: 'columna',
                 ordenarPor:'filas'
             })
         }else{
             this.setState({
                 direccion:'filas',
-                ordenarPor:'columnas',
+                ordenarPor:'columna',
             })
         }
     }

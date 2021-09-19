@@ -23,20 +23,20 @@ width: 15%;
 padding: 2em;
 }
 
-.columnas .contenedorTarjeta .info{
+.columna .contenedorTarjeta .info{
 display: flex;
 flex-direction: column;
 padding: 2em;
 margin-right: 2em;
 }
 
-.columnas .contenedorTarjeta{
+.columna .contenedorTarjeta{
     display: flex;
     flex-direction: column;
     padding: 2em;
 }
 
-.columnas .foto{
+.columna .foto{
     width: 20%;
     height: 80%;
 }
