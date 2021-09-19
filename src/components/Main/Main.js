@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Tarjeta from "../Tarjeta/Tarjeta";
-import Header from "../Header/Header";
+import Buscador from "../Buscador/Buscador";
 import './style.css'; 
 
 let key = "3801289076602860794bddb717c8f4f5"
@@ -30,7 +30,7 @@ export default class Main extends Component{
         })
         .catch(error => console.log(error));
     }
-    //Funciona
+
     eliminarPelicula(id){
         console.log(id)
         let peliculaFiltradas = this.state.pelicula.filter(pelicula => pelicula.id !== id)
@@ -91,9 +91,6 @@ export default class Main extends Component{
             })
         }
     }
-    abecedario(){
-        
-    }
   
     render(){
         console.log(this.state.pelicula)
@@ -111,11 +108,12 @@ export default class Main extends Component{
                         <li className="agregar"> <button className="boton" onClick={()=>this.agregarPelicula()}>Agregar mas</button></li> 
                     </ul>
                 </nav>
+                <img className="banner" src="../imagenes/banner corto copy.jpg" alt="banner"/>
             </header>
-            <Header filtrarPorNombre={(nombreAFiltrar)=>this.filtrarPorNombre(nombreAFiltrar)} />
+
+            <Buscador filtrarPorNombre={(nombreAFiltrar)=>this.filtrarPorNombre(nombreAFiltrar)} />
                
             <main className={this.state.ordenarPor}>
-                
                 
                 {this.state.filterPeliculas.length === 0 ?
                 
@@ -125,8 +123,8 @@ export default class Main extends Component{
                     key={index}
                     id={pelicula.id}
                     foto={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
-                    titulo={pelicula.title}//Funciona
-                    descripcion={pelicula.overview}//Funciona
+                    titulo={pelicula.title}
+                    descripcion={pelicula.overview}
                     // vermas={(titulo)=>this.expandirPelicula(titulo)}
                     idioma={pelicula.original_language}
                     estreno={pelicula.release_date}

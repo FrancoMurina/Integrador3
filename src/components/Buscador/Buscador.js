@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import "./style.css";
 
-export default class Header extends Component{
+export default class Buscador extends Component{
     constructor(){
         super();
+        //Valor inicial del estado
         this.state= {
             valorInput: ""
         }
     }
-    
-    // ordenar(){};
     
    
     prevenirSubmit(evento){
@@ -23,6 +22,7 @@ export default class Header extends Component{
             valorInput: evento.target.value 
         },
         //Filtrar
+        //Funcion callback que se ejecuta inmediatamente despues de actualizar el estado
         () => this.props.filtrarPorNombre(this.state.valorInput)
         )
     }
@@ -30,11 +30,8 @@ export default class Header extends Component{
 
     render(){
         return(
-    <header>
-        <img className="banner" src="../imagenes/banner corto copy.jpg" alt="banner"/>
-    
+    <div>
         <section>
-            {/* <p>Ordenar ASC/ DESC</p> */}
             <i className="fas fa-th"></i>
             <i className="fas fa-align-justify"></i>
 
@@ -44,7 +41,7 @@ export default class Header extends Component{
                 <button className="botonbuscar"type="submit"><i className="fas fa-search">Buscar</i></button>
             </form>
         </section>
-    </header>
+    </div>
         )
     }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './style.css';
+
 export default class Tarjeta extends Component{
     constructor(props){
         super(props);
@@ -20,6 +21,7 @@ export default class Tarjeta extends Component{
             mensaje:"Ver mas"
         })
     }}
+    
     render(){
 
         return(
