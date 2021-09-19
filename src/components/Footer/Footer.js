@@ -1,15 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import './style.css';
 
-export default class Footer extends Component{
-    constructor(props){
-        super(props);
-        this.state={
+function Footer() {
 
-        }
-    }
-    render(){
-        return(
+    return(
         <footer>
             <p className="integrantes">Maria Noel Russo Mendez, Alexia Alurralde y Franco Murina</p>
             <ul className="ultimalinea">
@@ -18,6 +12,7 @@ export default class Footer extends Component{
                 <li className="twitter"><img src="./imagenes/twitter.png" alt="twitter"/></li>
             </ul>
         </footer>
-        )
-    }
+    )
 }
+
+export default Footer;
