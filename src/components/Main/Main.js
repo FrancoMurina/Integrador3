@@ -42,7 +42,7 @@ export default class Main extends Component{
     }
 
     filtrarPorNombre(nombreAFiltrar){
-        console.log(nombreAFiltrar);
+        //console.log(nombreAFiltrar);
         const arrayFiltrada = this.state.pelicula.filter(
             pelicula => pelicula.title.toLowerCase().includes(nombreAFiltrar.toLowerCase())
         );

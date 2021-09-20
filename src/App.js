@@ -1,5 +1,5 @@
 import React from 'react';
-import Buscador from './components/Buscador/Buscador';
+//import Buscador from './components/Buscador/Buscador';
 import Footer from './components/Footer/Footer';
 import Main from './components/Main/Main';
 
