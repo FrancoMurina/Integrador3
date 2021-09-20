@@ -65,7 +65,7 @@ export default class Main extends Component{
         } 
     }
     agregarPelicula(){
-        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=${this.state.page}&top=10&index=${this.state.index}`)
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=${this.state.page}`)
         .then(response => response.json())
         .then(data=>{
             let arrayPrevio = this.state.pelicula;
