@@ -74,7 +74,7 @@ export default class Main extends Component{
             this.setState({
                 pelicula:arrayActualizado,
                 filterPeliculas:arrayActualizado,
-                pagina: paginaActualizado,
+                page: paginaActualizado,
             })
         })
     }
